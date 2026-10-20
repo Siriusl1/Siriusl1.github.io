@@ -1,4 +1,4 @@
-
+﻿
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         html {
@@ -1059,3 +1059,241 @@
             .footer-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
             .footer-links { gap: 18px; flex-wrap: wrap; }
         }
+
+/* =========================================================================
+   07b 厂内实景 —— 工厂实拍照片（客户提供，媒体库附件 1124–1159）
+   -------------------------------------------------------------------------
+   设计语言对齐站点主视觉：
+     主色 #344069（深蓝）· 品牌红 #E60012 · 页面底色 #fafafa
+   图片统一 aspect-ratio 固定比例，零 CLS。
+   ========================================================================= */
+
+.tk-factory-section {
+    padding: 100px 0;
+    background: #f7f8fa;
+}
+
+.tk-factory-inner {
+    width: min(calc(100% - 80px), 1440px);
+    margin: 0 auto;
+}
+
+/* ---------- 标题区 ---------- */
+
+.tk-factory-heading {
+    max-width: 820px;
+    margin-bottom: 52px;
+}
+
+.tk-factory-heading .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 18px;
+    color: #344069;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.tk-factory-heading .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 3px;
+    background: #E60012;
+}
+
+.tk-factory-heading h2 {
+    margin: 0 0 18px;
+    color: #1a1a1a;
+    font-size: clamp(30px, 3.6vw, 46px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -.015em;
+}
+
+.tk-factory-lead {
+    margin: 0;
+    max-width: 68ch;
+    color: #6b6b6b;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+/* ---------- 画廊网格 ---------- */
+
+.tk-factory-gallery {
+    display: grid;
+    gap: 20px;
+}
+
+.tk-factory-gallery.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.tk-factory-gallery.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+.tk-factory-figure {
+    margin: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8eaee;
+    box-shadow: 0 10px 30px rgba(26, 26, 46, .06);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.tk-factory-figure:hover {
+    transform: translateY(-4px);
+    border-color: #344069;
+    box-shadow: 0 20px 44px rgba(26, 26, 46, .13);
+}
+
+.tk-factory-figure .tk-factory-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.tk-factory-figure:hover .tk-factory-img {
+    transform: scale(1.04);
+}
+
+.tk-factory-figure figcaption {
+    padding: 13px 16px 15px;
+    color: #4a4a4a;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: .01em;
+    border-top: 1px solid #f0f2f5;
+    background: #fff;
+}
+
+/* ---------- 单张大图 ---------- */
+
+.tk-factory-hero {
+    margin: 0 0 20px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8eaee;
+    box-shadow: 0 10px 30px rgba(26, 26, 46, .06);
+}
+
+.tk-factory-hero .tk-factory-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.tk-factory-hero figcaption {
+    padding: 13px 16px 15px;
+    color: #4a4a4a;
+    font-size: 13px;
+    font-weight: 600;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* ---------- 「查看更多」 ---------- */
+
+.tk-factory-more {
+    margin: 44px 0 0;
+}
+
+.tk-factory-more .text-link {
+    margin-top: 0;
+}
+
+/* ---------- 生产工艺流程（About Quality） ---------- */
+
+.tk-process-list {
+    border-top: 1px solid #e2e6eb;
+}
+
+.tk-process-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    border-bottom: 1px solid #e2e6eb;
+}
+
+.tk-process-item:nth-child(even) .tk-process-media {
+    order: 2;
+}
+
+.tk-process-media {
+    position: relative;
+    overflow: hidden;
+    background: #dde2e7;
+    min-height: 380px;
+}
+
+.tk-process-media .tk-factory-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tk-process-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 56px 52px;
+    background: #fff;
+}
+
+.tk-process-step {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #E60012;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+.tk-process-copy h3 {
+    margin: 0 0 14px;
+    color: #1a1a1a;
+    font-size: clamp(22px, 2.2vw, 30px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+}
+
+.tk-process-copy p {
+    margin: 0;
+    max-width: 46ch;
+    color: #6b6b6b;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+/* ---------- 响应式 ---------- */
+
+@media (max-width: 1200px) {
+    .tk-factory-inner { width: calc(100% - 64px); }
+}
+
+@media (max-width: 900px) {
+    .tk-factory-section { padding: 64px 0; }
+    .tk-factory-inner { width: calc(100% - 40px); }
+    .tk-factory-gallery.grid-3,
+    .tk-factory-gallery.grid-2 { grid-template-columns: 1fr; }
+    .tk-factory-heading { margin-bottom: 34px; }
+
+    .tk-process-item { grid-template-columns: 1fr; }
+    .tk-process-item:nth-child(even) .tk-process-media { order: 0; }
+    .tk-process-media { min-height: 240px; }
+    .tk-process-copy { padding: 30px 24px 36px; }
+}
+
+@media (max-width: 600px) {
+    .tk-factory-gallery { gap: 14px; }
+    .tk-factory-figure figcaption { font-size: 12px; padding: 11px 12px 13px; }
+    .tk-factory-more { margin-top: 30px; }
+}
