@@ -12,6 +12,22 @@ Static export of the TUSKOLIFT industrial lifting-equipment website, hosted with
 A static mirror of the site's public pages: home, about, offerings, products,
 blog and posts, contact, legal pages, plus all theme CSS/JS and media assets.
 
+It includes **36 factory photographs** (real production-floor images supplied by the
+factory) presented in four places:
+
+| Page | Section | Photos |
+|---|---|---|
+| Home `/` | `#factory-gallery` — *Inside the Works* | 6, one per production stage |
+| About `/about/` | `#factory` — *Inside the plant* | 1 hero + 4 grid |
+| About → Quality `/about/about-quality/` | `#production-flow` — *Five steps* | 5, one per process step |
+| About → Company `/about/about-company/` | `#our-facility` — *Our facility* | 6 |
+| Offerings `/offerings/` | `#offerings-in-practice` | 6 |
+| Offerings → Manufacturing | `#manufacturing-floor` | 6 |
+| Offerings → Solutions | `#solutions-in-context` | 5 |
+
+Originals were 7008×4672 (16–25 MB each). They were resized to 2000 px long edge and
+JPEG-compressed at quality 85, cutting total size by ~98%.
+
 ## Important limitations of a static export
 
 This is a **snapshot**, not the live CMS. Some dynamic features therefore do not work:
